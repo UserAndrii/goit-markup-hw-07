@@ -58,7 +58,7 @@
 .project__description {
   font-size: 18px;
   line-height: 1.56;
-  color: $primary-white-color;
+  color: getColor("bgc-text-white");
 }
 
 .project__meta {
@@ -70,7 +70,7 @@
 }
 
 .project__name {
-  color: $title-color;
+  color: getColor("title");
 
   font-size: 18px;
   line-height: 2;
@@ -80,7 +80,7 @@
 }
 
 .project__type {
-  color: $text-color;
+  color: getColor("text");
 
   font-size: 16px;
   line-height: 1.88;

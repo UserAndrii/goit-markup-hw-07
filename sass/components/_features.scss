@@ -14,14 +14,12 @@
 }
 
 .features__icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include centeredFlex();
 
   width: 100%;
   height: 120px;
 
-  background-color: $background-second-color;
+  background-color: getColor("bgc-second");
   border-radius: 4px;
   margin-bottom: $card-set-gap;
 }
@@ -36,7 +34,7 @@
 }
 
 .features__text {
-  color: $text-color;
+  color: getColor("text");
 
   font-size: 14px;
   line-height: 1.71;

@@ -12,7 +12,7 @@
 }
 
 .form__label {
-  color: $text-color;
+  color: getColor("text");
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
@@ -35,7 +35,7 @@
   transition: border $transition-timing $timing-function;
 
   &:focus {
-    border: 1px solid $hover-accent-color;
+    border: 1px solid getColor("hover-accent");
     outline: transparent;
   }
 
@@ -61,25 +61,23 @@
   left: 12px;
   top: 50%;
 
-  font: inherit;
+  fill: inherit;
   transform: translateY(-50%);
   transition: fill $transition-timing $timing-function;
 
   .form__input:focus + & {
-    fill: $hover-accent-color;
+    fill: getColor("hover-accent");
   }
 }
 
 // CONSENT
 
 .consent {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include centeredFlex();
 
   font-size: 14px;
   line-height: 1.71;
-  color: $text-color;
+  color: getColor("text");
   cursor: pointer;
 
   margin-top: 20px;
@@ -92,16 +90,14 @@
 }
 
 .consent__icon {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+  @include centeredFlex($type: inline-flex);
 
   width: 16px;
   height: 15px;
   margin-right: 8px;
 
   border-radius: 2px;
-  border: 2px solid $title-color;
+  border: 2px solid getColor("title");
   transition: border $transition-timing $timing-function,
     background-color $transition-timing $timing-function;
 
@@ -112,13 +108,13 @@
   }
 
   .consent__checkbox:checked + & {
-    background-color: $hover-accent-color;
-    border: 2px solid $hover-accent-color;
+    background-color: getColor("hover-accent");
+    border: 2px solid getColor("hover-accent");
   }
 }
 
 .consent__link {
-  color: $hover-accent-color;
+  color: getColor("hover-accent");
 }
 
 .submit-btn {
@@ -131,7 +127,7 @@
 
   &:hover,
   &:focus {
-    background-color: $hover-second-color;
-    color: $primary-white-color;
+    background-color: getColor("hover-second");
+    color: getColor("bgc-text-white");
   }
 }

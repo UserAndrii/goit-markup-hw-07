@@ -1,6 +1,6 @@
 body {
-  background-color: #ffffff;
-  color: $title-color;
+  background-color: getColor("bgc-text-white");
+  color: getColor("title");
 
   font-family: $primary-font;
   letter-spacing: 0.03em;

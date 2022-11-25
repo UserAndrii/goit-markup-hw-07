@@ -1,5 +1,5 @@
 .team {
-  background-color: $background-second-color;
+  background-color: getColor("bgc-second");
 }
 
 .team__list {
@@ -10,7 +10,7 @@
 }
 
 .team__item {
-  background-color: $primary-white-color;
+  background-color: getColor("bgc-text-white");
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -36,7 +36,7 @@
 }
 
 .employee__position {
-  color: $text-color;
+  color: getColor("text");
   font-size: 16px;
   line-height: 1.19;
   margin-bottom: 16px;
@@ -45,9 +45,7 @@
 // NETWORKS
 
 .networks {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include centeredFlex();
   list-style: none;
   padding: 0;
   margin: 0;
@@ -63,28 +61,26 @@
 }
 
 .networks__link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include centeredFlex();
 
   width: 100%;
   height: 100%;
   border-radius: 50%;
 
-  fill: $icons-color;
+  fill: getColor("icons");
   transition: background-color $transition-timing $timing-function,
     fill $transition-timing $timing-function;
 
   &:hover,
   &:focus {
-    background-color: $hover-accent-color;
-    fill: $primary-white-color;
+    background-color: getColor("hover-accent");
+    fill: getColor("bgc-text-white");
   }
 
   //   NETWORKS FOOTER
 
   &--change-color {
-    fill: $primary-white-color;
+    fill: getColor("bgc-text-white");
     background: rgba(255, 255, 255, 0.1);
   }
 }
