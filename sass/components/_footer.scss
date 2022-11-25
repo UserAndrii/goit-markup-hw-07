@@ -1,0 +1,121 @@
+.footer {
+  background-color: $hero-footer-bgc;
+  padding: 60px 0;
+}
+
+.footer__conteiner {
+  display: flex;
+  align-content: center;
+  align-items: baseline;
+}
+
+.footer__address {
+  display: flex;
+  flex-direction: column;
+  margin-right: 70px;
+}
+
+.footer__logo {
+  color: $primary-white-color;
+  margin-bottom: 20px;
+}
+
+.footer__contacts {
+  font-style: normal;
+}
+
+// ADDRESS
+
+.address {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.address__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.address__link {
+  font-size: 14px;
+  line-height: 1.71;
+  text-decoration: none;
+
+  color: rgba(255, 255, 255, 0.6);
+  transition: color $transition-timing $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $hover-accent-color;
+  }
+
+  &--white-text {
+    color: $primary-white-color;
+    transition: color $transition-timing $timing-function;
+  }
+}
+
+.call-title {
+  color: $primary-white-color;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  margin-bottom: 20px;
+}
+
+// SUBSCRIPTION
+
+.subscription {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+}
+
+.subscription__form {
+  display: flex;
+}
+
+.subscription__input {
+  width: 358px;
+  height: 50px;
+  padding-left: 16px;
+
+  background-color: $hero-footer-bgc;
+  color: $primary-white-color;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  transition: border $transition-timing $timing-function;
+
+  &::placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  &:focus {
+    border: 1px solid $hover-accent-color;
+    outline: transparent;
+  }
+}
+
+.subscription__button {
+  @extend %button;
+  display: flex;
+  align-items: center;
+  padding: 10px 28px;
+  margin-left: 12px;
+
+  &:hover,
+  &:focus {
+    background-color: $hover-second-color;
+    color: $primary-white-color;
+  }
+}
+
+.subscription__icon {
+  margin-left: 10px;
+}
